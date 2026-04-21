@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <linl rel="icon" type="image/png" href="le42s.png"
+  <title>Edufluxo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--aparecer os botoēs na tela inicial-->
+  <h1>Edufluxo</h1>
+  <nav class="tuialfa">
+    <a href="#ocorrencias">Ocorrências</a>
+    <a href="#fluxo_saida">Fluxo de sáida</a>
+  </nav>
+  
+  <section id="inicio"></section>
+
+  <hr>
+  <!--botão ocorrencias-->
+  <section id="ocorrencias" class="masculo">
+    <h2>Ocorrências</h2>
+    <button>Mostrar</button>
+    <button onclick="Selecionar_registro('professor')">Registrar</button>
+  </section>
+
+  <!--botão atrasos-->
+  <section id="fluxo_saida" class="masculo">
+    <h2>Fluxo de Saída</h2>
+    <button>Mostrar</button>
+    <button onclick="Selecionar_registro('portaria')">Registrar</button>
+  </section>
+
+  <div id="registro" style="display: none;">
+      <h2>Registrar</h2>
+      <form action="registro.php" method="post">
+        <input type="hidden" id="tipo_registro" name="tipo_registro"></input>
+        <label for="id_aluno">ID do aluno:</label>
+        <input type="text" name="ID_aluno"></input>
+    
+        <label for="id_usuario">Seu ID</label>
+        <input type="text" name="ID_usuario"></input>
+    
+        <label for="motivo">Motivo da ocorrencia:</label>
+        <textarea id="motivo" name="motivo"></textarea>
+    
+        <input type="submit" value="Registrar"></input>
+      </form>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    addEventListener('DOMContentLoaded', function() {
+      const parametros = new URLSearchParams(window.location.search);
+      const cargoUsuario = parametros.get('cargo');
+      if (cargoUsuario) {
+        Verificar_permissoes(cargoUsuario);
+      }
+    });
+  </script>
+  <hr>
+
+</body>
+</html>
+
