@@ -19,6 +19,11 @@ function Verificar_permissoes(cargo) {
     }
 }
 
+function Login() {
+    document.getElementById('login').style.display = 'block';
+    document.getElementById('cadastro').style.display = 'none';
+}
+
 function Selecionar_registro(cargo) {
     document.getElementById('registro').style.display = "block";
     document.getElementById('tipo_registro').value = cargo;
@@ -29,3 +34,4 @@ function Selecionar_registro(cargo) {
         document.querySelector("#registro h2").innerText = "Registrar saída";
     }
 }
+

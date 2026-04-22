@@ -32,4 +32,17 @@
             <input type="submit" value="Cadastrar">
         </form>
     </div>
+    <button onclick="Login()">Já tenho uma conta</button>
+    <div id="login" style="display: none;">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome_login" name="nome"></input>
+
+            <label for="senha">Senha do tipo</label>
+            <input type="password" id="senha_login" name="senha"></input>
+
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
 </body>
