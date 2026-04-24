@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require "conexao.php";
 
@@ -14,8 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($usuario = $getUsuario->fetch_assoc()) {
         if (password_verify($senha_digitada, $usuario['senha'])) {
-            $cargo = $usuario['cargo'];
-            header('Location: inicio.html?cargo=' . urlencode($cargo));
+            $_SESSION['cargo'] = $usuario['cargo'];
+            $_SESSION['nome'] = $usuario['nome'];
+            header('Location: inicio.html?cargo=' . urlencode($usuario['cargo']));
             exit();
         } else {
             echo('Senha incorreta!');
