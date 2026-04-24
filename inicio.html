@@ -2,11 +2,13 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edufluxo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <img src="logo.png" class="logo">
   <!--aparecer os botoēs na tela inicial-->
   <h1>Edufluxo</h1>
   <nav class="tuialfa">
@@ -20,14 +22,14 @@
   <!--botão ocorrencias-->
   <section id="ocorrencias" class="masculo">
     <h2>Ocorrências</h2>
-    <button>Mostrar</button>
+    <button onclick="Mostrar_registros('professor')">Mostrar</button>
     <button onclick="Selecionar_registro('professor')">Registrar</button>
   </section>
 
   <!--botão atrasos-->
   <section id="fluxo_saida" class="masculo">
     <h2>Fluxo de Saída</h2>
-    <button>Mostrar</button>
+    <button onclick="Mostrar_registros('portaria')">Mostrar</button>
     <button onclick="Selecionar_registro('portaria')">Registrar</button>
   </section>
 
@@ -47,6 +49,7 @@
         <input type="submit" value="Registrar"></input>
       </form>
   </div>
+  <div id="lista_registros" class="masculo" style="margin-top: 20px;"></div>
   <script src="script.js"></script>
   <script>
     addEventListener('DOMContentLoaded', function() {

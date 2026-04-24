@@ -35,3 +35,11 @@ button{
   display: none;
 }
 }
+
+.logo {
+  position: absolute;
+  bottom: 100px;
+  left: 40%;
+  width: 200px;
+  height: auto;
+}

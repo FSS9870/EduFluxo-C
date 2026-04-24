@@ -9,7 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $senhas_permitidas = [
             'professor' => '123',
-            'portaria' => '456'
+            'portaria' => '456',
+            'diretor' => 'MANS'
         ];
 
     $hash = password_hash($senha_digitada, PASSWORD_DEFAULT);
