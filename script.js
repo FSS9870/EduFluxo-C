@@ -14,9 +14,11 @@ function Verificar_permissoes(cargo) {
     if (cargo == 'professor') {
         document.getElementById("ocorrencias").style.display = "block";
         document.getElementById("fluxo_saida").style.display = "none";
+        document.getElementById("MostrarOC").style.display = "none";
     } else if (cargo == 'portaria') {
         document.getElementById("fluxo_saida").style.display = "block";
         document.getElementById("ocorrencias").style.display = "none";
+        document.getElementById("MostrarFS").style.display = "none";
     }
 }
 

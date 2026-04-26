@@ -9,7 +9,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $motivo = $_POST['motivo'];
     $tipo = $_POST['tipo_registro'] ?? '';
 
-    // Definimos a tabela com base no tipo vindo do formulário
     if ($tipo == 'professor') {
         $tabela = 'ocorrencias';
     } else if ($tipo == 'portaria') {

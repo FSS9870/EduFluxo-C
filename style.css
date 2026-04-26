@@ -2,6 +2,7 @@
 body{
   background-color: #002147;
   color: white;
+}
 
 /*cor do botão*/
 button{
@@ -33,7 +34,6 @@ button{
 /*nada apareçe no início */
 #inicio:target ~ .secao {
   display: none;
-}
 }
 
 .logo {

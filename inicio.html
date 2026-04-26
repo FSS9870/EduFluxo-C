@@ -14,6 +14,7 @@
   <nav class="tuialfa">
     <a href="#ocorrencias">Ocorrências</a>
     <a href="#fluxo_saida">Fluxo de sáida</a>
+    <a href="logout.php">Sair</a>
   </nav>
   
   <section id="inicio"></section>
@@ -22,15 +23,15 @@
   <!--botão ocorrencias-->
   <section id="ocorrencias" class="masculo">
     <h2>Ocorrências</h2>
-    <button onclick="Mostrar_registros('professor')">Mostrar</button>
-    <button onclick="Selecionar_registro('professor')">Registrar</button>
+    <button id="MostrarOC" onclick="Mostrar_registros('professor')">Mostrar</button>
+    <button id="RegistrarOC" onclick="Selecionar_registro('professor')">Registrar</button>
   </section>
 
   <!--botão atrasos-->
   <section id="fluxo_saida" class="masculo">
     <h2>Fluxo de Saída</h2>
-    <button onclick="Mostrar_registros('portaria')">Mostrar</button>
-    <button onclick="Selecionar_registro('portaria')">Registrar</button>
+    <button id="MostrarFS" onclick="Mostrar_registros('portaria')">Mostrar</button>
+    <button id="RegistrarFS" onclick="Selecionar_registro('portaria')">Registrar</button>
   </section>
 
   <div id="registro" style="display: none;">
